@@ -237,7 +237,7 @@ namespace dotless.Core.Parser.Tree
             {
                 if (!env.Compress && env.Debug && Location != null)
                 {
-                    env.Output.Append(string.Format("/* {0}:L{1} */\n", Location.FileName, Zone.GetLineNumber(Location)));
+                    env.Output.Append(string.Format("/* //]: # (Source {0}:L{1}) */\n", Location.FileName, Zone.GetLineNumber(Location)));
                 }
                 paths.AppendSelectors(context, Selectors);
             }
